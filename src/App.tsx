@@ -3,6 +3,7 @@ import { useState, useMemo } from "react";
 
 import Minter from "./Minter";
 import Roadmap from "./Roadmap";
+import Team from "./Team";
 
 import * as anchor from "@project-serum/anchor";
 import { clusterApiUrl } from "@solana/web3.js";
@@ -18,6 +19,7 @@ import {
   ConnectionProvider,
   WalletProvider,
 } from "@solana/wallet-adapter-react";
+import TwitterIcon from '@mui/icons-material/Twitter';
 
 import { WalletDialogProvider } from "@solana/wallet-adapter-material-ui";
 import { Button, CssBaseline, GlobalStyles } from "@mui/material";
@@ -109,7 +111,7 @@ const App = () => {
   return (
     <ThemeProvider theme={light ? themeLight : themeDark}>
       {" "}
-      \ <CssBaseline />
+      <CssBaseline />
       {/* <GlobalStyles
         styles={{
           body: { backgroundColor: "gray" },
@@ -171,11 +173,18 @@ const App = () => {
               <a href="/#link4" onClick={toggleMenu}>
                 FAQ
               </a>
+              <a href="https://the-97-universe.gitbook.io/welcome-to-gitbook/" onClick={toggleMenu}>Docs</a>
             </li>
             <li>
               <div className="social-icons">
-                <img className="nav-social" src="/icons/twitter.svg" alt="" />
+                <button >
+                  <a href="https://twitter.com/The97Universe">
+                    <img className="nav-social" src="/icons/twitter.svg" alt="" />
+                  </a>
+                </button>
+                <button>
                 <img className="nav-social" src="/icons/discord.svg" alt="" />
+                </button>
               </div>
             </li>
           </ul>
@@ -208,9 +217,11 @@ const App = () => {
             <a className="hide-800" href="/#link4">
               FAQ
             </a>
+            <a href="https://the-97-universe.gitbook.io/welcome-to-gitbook/">Docs</a>
             <div className="social-icons hide-800">
-              <img className="nav-social" src="/icons/twitter.svg" alt="" />
-              <img className="nav-social" src="/icons/discord.svg" alt="" />
+              <TwitterIcon />
+              {/* <img className="nav-social" src="/icons/twitter.svg" alt="" /> */}
+              {/* <img className="nav-social" src="/icons/discord.svg" alt="" /> */}
             </div>
           </div>
         </nav>
@@ -218,19 +229,18 @@ const App = () => {
           <header className="card" id="link1">
             <div style={{ padding: "0 24px 0 24px 0" }}>
               <h3 className="text-secondary-color">Welcome To 97 Unvierse</h3>
-              <h1 className="pb-3">Entertainment DEX</h1>
+              <h1 className="pb-3">Streamfi NFT Platform</h1>
               <p className="text-secondary-color">
                 A web series of the nfts then adapted to a animated series. The
                 creator, Mr. 97, is the live action representation of the
                 cartoon and a music artist; so there will be royalties given to
-                holders from album streams/sales. There will eventually start a
-                tv show/movie and liveaction/animated music videos.
+                holders from album streams/sales. There will eventually start a tv show, movies, live action/animation music videos, and a play to earn game.
               </p>
             </div>
             <div>
               <ConnectionProvider endpoint={endpoint}>
                 <WalletProvider wallets={wallets} autoConnect>
-                  <WalletDialogProvider>
+                  <WalletDialogProvider>              
                     <Minter
                       candyMachineId={candyMachineId}
                       connection={connection}
@@ -266,6 +276,7 @@ const App = () => {
 
           <div id="link3" className="container card">
             <h1 className="pb-3">Meet the Team</h1>
+            <Team />
           </div>
 
           <div id="link4" className="container faq">

@@ -179,8 +179,8 @@ const Home = (props: HomeProps) => {
         return;
       }
       console.log("wallet connected");
-      if(anchorWallet.publicKey){
-      setPublicKey(anchorWallet.publicKey)
+      if (anchorWallet.publicKey) {
+        setPublicKey(anchorWallet.publicKey);
       }
 
       // try {
@@ -214,16 +214,12 @@ const Home = (props: HomeProps) => {
 
   useEffect(() => {
     async function getTokenAmount() {
-      if (
-        publicKey &&
-        candyMachine?.state.whitelistMintSettings?.mint
-      ) {
+      if (publicKey && candyMachine?.state.whitelistMintSettings?.mint) {
         try {
           var tokenAmount =
-            await props.connection.getParsedTokenAccountsByOwner(
-              publicKey,
-              { mint: candyMachine?.state.whitelistMintSettings?.mint }
-            );
+            await props.connection.getParsedTokenAccountsByOwner(publicKey, {
+              mint: candyMachine?.state.whitelistMintSettings?.mint,
+            });
           setWhiteListTokenBalance(
             tokenAmount.value[0].account.data.parsed.info.tokenAmount.amount
           );
@@ -283,7 +279,29 @@ const Home = (props: HomeProps) => {
                 publicSaleSettings.enableCustomHTML && (
                   <MintPublicSaleCustomHTML />
                 )}
-
+              {window.screen.width > 1000 ? (
+                <iframe
+                  allow="autoplay"
+                  className="embed-responsive-item"
+                  id="ytplayer"
+                  title="YouTube video player"
+                  width="240"
+                  height="260"
+                  allowFullScreen={true}
+                  src="https://bafybeieqniv3obqyuppsrs4ct7qenxmxvrpjib2ow76c3iqwt5eqaqq2ga.ipfs.dweb.link/"
+                ></iframe>
+              ) : (
+                <iframe
+                  allow="autoplay"
+                  className="embed-responsive-item"
+                  id="ytplayer"
+                  title="YouTube video player"
+                  width="140"
+                  height="160"
+                  allowFullScreen={true}
+                  src="https://bafybeieqniv3obqyuppsrs4ct7qenxmxvrpjib2ow76c3iqwt5eqaqq2ga.ipfs.dweb.link/"
+                ></iframe>
+              )}
               {(phase === Phase.PublicMint || Phase.WhiteListMint) && (
                 <>
                   {phase === Phase.WhiteListMint && (

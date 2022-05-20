@@ -47,9 +47,6 @@ const RoadMap = () => {
             2. Add DEX and Liquidity Pools to the official website
           </p>
           <p>
-            3. Release first episode to Mr.97 official cartoon show (Pilot Episode)
-          </p>
-          <p>
             4. Giveaway 10 more 3D NFTs of Mr.97 and will receive keychain on a later date (Second Edition)
           </p>
           <p>
@@ -78,15 +75,18 @@ const RoadMap = () => {
             2. Launch two Mr. 97 mini games
           </p>
           <p>
-            3. Physical Mr. 97 keychain to all Holders (have to sign up)
+            3. Release first episode to Mr.97 official cartoon show (Pilot Episode)
           </p>
           <p>
-            4. Auction off manga manuscripts to the public
+            4. Physical Mr. 97 keychain to all Holders (have to sign up)
           </p>
           <p>
-            5. Release third music single or Album for Mr. 97. NFT holders will receive a percentage of royalties quarterly           </p>
+            5. Auction off manuscripts as nfts to the public
+          </p>
           <p>
-            6. Start production on live-action movie
+            6. Release third music single or Album for Mr. 97. NFT holders will receive a percentage of royalties quarterly           </p>
+          <p>
+            7. Start production on live-action movie
           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement

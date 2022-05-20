@@ -146,7 +146,7 @@ export const publicSaleSettings: PublicSaleSettings = {
 
   //Title and Description
   title: "Public Sale",
-  desc: "Sale is now live. Mint your NFT below",
+  desc: "",
 
   //Enable Custom HTML
   enableCustomHTML: false,
